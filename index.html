@@ -9,6 +9,65 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    
+    <!-- Navbar goes here -->
+		<nav class="bg-white shadow-lg">
+			<div class="max-w-6xl mx-auto px-4">
+				<div class="flex justify-between">
+					<div class="flex space-x-7">
+						<div>
+							<!-- Website Logo -->
+							<a href="#" class="flex items-center py-4 px-2">
+								<img src="resources/etcetra/logo.jpg" alt="Logo" class="h-8 w-8 mr-2">
+								<span class="font-semibold text-yellow-500 text-lg">তানভীর ইসলাম</span>
+							</a>
+						</div>
+						<!-- Primary Navbar items -->
+						<div class="hidden md:flex items-center  space-x-1">
+							<a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">প্রথম পাতা</a>
+							<a href="" class="py-4 px-2 text-yellow-500 font-semibold hover:text-green-500 transition duration-300">গল্প</a>
+							<a href="" class="py-4 px-2 text-yellow-500 font-semibold hover:text-green-500 transition duration-300">প্রবন্ধ</a>
+							<a href="" class="py-4 px-2 text-yellow-500 font-semibold hover:text-green-500 transition duration-300">কবিতা</a>
+							<a href="" class="py-4 px-2 text-yellow-500 font-semibold hover:text-green-500 transition duration-300">আমার ফটোগ্রাফী</a>
+							<a href="" class="py-4 px-2 text-yellow-500 font-semibold hover:text-green-500 transition duration-300">আমার সম্পর্কে</a>
+						</div>
+					</div>
+					<!-- Mobile menu button -->
+					<div class="md:hidden flex items-center">
+						<button class="outline-none mobile-menu-button">
+						<svg class=" w-6 h-6 text-yellow-500 hover:text-green-500 "
+							x-show="!showMenu"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+					</div>
+				</div>
+			</div>
+			<!-- mobile menu -->
+			<div class="hidden mobile-menu">
+				<ul class="">
+					<li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-yellow-500 bg-green-500 font-semibold">প্রথম পাতা</a></li>
+					<li><a href="#golpo" class="block text-sm text-yellow-500 font-semibold px-2 py-4 hover:bg-green-500 transition duration-300">গল্প</a></li>
+					<li><a href="#probondho" class="block text-sm text-yellow-500 font-semibold px-2 py-4 hover:bg-green-500 transition duration-300">প্রবন্ধ</a></li>
+					<li><a href="#kobita" class="block text-sm text-yellow-500 font-semibold px-2 py-4 hover:bg-green-500 transition duration-300">কবিতা</a></li>
+					<li><a href="#amarphotography" class="block text-sm text-yellow-500 font-semibold px-2 py-4 hover:bg-green-500 transition duration-300">আমার ফটোগ্রাফী</a></li>
+					<li><a href="#amarsomporke" class="block text-sm text-yellow-500 font-semibold px-2 py-4 hover:bg-green-500 transition duration-300">আমার সম্পর্কে</a></li>
+				</ul>
+			</div>
+			<script>
+				const btn = document.querySelector("button.mobile-menu-button");
+				const menu = document.querySelector(".mobile-menu");
+
+				btn.addEventListener("click", () => {
+					menu.classList.toggle("hidden");
+				});
+			</script>
+		</nav>
 </body>
 </html>
